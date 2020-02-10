@@ -18,10 +18,10 @@ class Bio extends Component{
                         </Row>
                     
                     <Row >
-                        <Col>
+                        <Col className="d-none d-sm-block">
                             <img src={ProfilePic} className="m-auto img-thumbnail" width="245" alt="Profile Cover"/>
                         </Col>
-                        <Col>
+                        <Col sm="6">
                             <div className="card">
                                 <h2 className="card-header">
                                     Matthew Dunfee

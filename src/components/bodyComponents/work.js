@@ -18,9 +18,15 @@ class Work extends Component{
                     </Col>
                 </Row>
                 <Row>
-                    <Portfolio/>
-                    <Nucamp/>
-                    <OriginallyYoursUpholstery/>
+                    <Col sm='4'>
+                        <Portfolio/>
+                    </Col>
+                    <Col sm='4'>
+                        <OriginallyYoursUpholstery/>
+                    </Col> 
+                    <Col sm='4'>
+                        <Nucamp/>
+                    </Col>
                 </Row>
             </div>
         )

@@ -36,15 +36,15 @@ const ContactModal = (props) => {
             <Form onSubmit={handleSubmition}>
             <FormGroup>
                 <Label for="UsersEmail">Email</Label>
-                <Input type="email" name="email" id="UsersEmail" placeholder="with a placeholder" />
+                <Input type="email" name="email" id="UsersEmail" placeholder="abc@xyz" />
             </FormGroup>
             <FormGroup>
                 <Label for="UsersName">Name</Label>
-                <Input type="name" name="name" id="UsersName" placeholder="with a placeholder" />
+                <Input type="name" name="name" id="UsersName" placeholder="Your Name" />
             </FormGroup>
             <FormGroup>
                 <Label for="UsersCompany">Company</Label>
-                <Input type="company" name="company" id="UsersCompany" placeholder="with a placeholder" />
+                <Input type="company" name="company" id="UsersCompany" placeholder="Company" />
             </FormGroup>
             <FormGroup>
                 <Label for="exampleText">Message</Label>
