@@ -22,7 +22,7 @@ const CardWidth = "200px"
                             <CardTitle>Portfolio</CardTitle>
                             <Button color="secondary" block onClick={toggle}>Site Details</Button>
                             <Button block> Visit Site </Button>
-                            <Button href="https://github.com/m1dunfee/portfolio" target="_blank" block> GitHub </Button>
+                            <Button href="https://github.com/m1dunfee/React-Porfolio-Site" target="_blank" block> GitHub </Button>
 
 
                             <Modal isOpen={modal} toggle={toggle} className="">
@@ -32,12 +32,11 @@ const CardWidth = "200px"
                                         This site was build as a portfolio for your convenience.
                                     </p>
                                     <p>
-                                        Tools used to build this site: Bootstrap, Node
+                                        Tools used to build this site: Bootstrap, React ReactStrap, Node, Axios, Nodemailer
                                     </p>
                                 </ModalBody>
                                 <ModalFooter>
-                                <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
-                                <Button color="secondary" onClick={toggle}>Cancel</Button>
+                                <Button color="secondary" onClick={toggle}>Close</Button>
                                 </ModalFooter>
                             </Modal>
                             </CardBody>

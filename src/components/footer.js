@@ -3,7 +3,7 @@ import React, {Component} from "react";
 class Footer extends Component{
     render(){
         return(
-            <div className="headerAndFooter row p-3" id="contact">
+            <div className="headerAndFooter row p-3" >
                 <div className="col-6 text-center m-auto">
                     <a className="btn btn-social-icon btn-github btn-lg" href="https://github.com/m1dunfee" target="_blank"><i
                             className="fa fa-github"></i></a>

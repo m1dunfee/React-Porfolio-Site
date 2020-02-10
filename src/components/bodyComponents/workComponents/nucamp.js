@@ -37,8 +37,7 @@ const CardWidth = "200px"
                                     </p>
                                 </ModalBody>
                                 <ModalFooter>
-                                <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
-                                <Button color="secondary" onClick={toggle}>Cancel</Button>
+                                <Button color="secondary" onClick={toggle}>Close</Button>
                                 </ModalFooter>
                             </Modal>
                             </CardBody>

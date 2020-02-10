@@ -33,12 +33,11 @@ const CardWidth = "200px"
                                         This site was build for a client's small buiness.
                                     </p>
                                     <p>
-                                        Tools used to build this site: Bootstrap, React ReactStrap, Node, Axios, Mailgun API
+                                        Tools used to build this site: Bootstrap, React ReactStrap, Node, Axios, Nodemailer.
                                     </p>
                                 </ModalBody>
                                 <ModalFooter>
-                                <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
-                                <Button color="secondary" onClick={toggle}>Cancel</Button>
+                                <Button color="secondary" onClick={toggle}>Close</Button>
                                 </ModalFooter>
                             </Modal>
                             </CardBody>
