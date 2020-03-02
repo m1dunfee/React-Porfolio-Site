@@ -1,182 +1,187 @@
 import React, { useState } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import classnames from 'classnames';
 
-const Example = (props) => {
+function Skills(){
   const [activeTab, setActiveTab] = useState('1');
 
   const toggle = tab => {
-    if(activeTab !== tab) setActiveTab(tab);
+    if (activeTab !== tab) setActiveTab(tab);
   }
 
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => setModal(!modal);
+
   return (
-    
-    <div>
-    <Row id="skills">
-        <Col>
-            <h2 class="text-center">
-                <hr/>
-                Skills
-                <hr/>
-            </h2>
-        </Col>
-    </Row>
-      <Nav tabs>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '1' })}
-            onClick={() => { toggle('1'); }}
-          >
-            Perfered-laungages
+    <>
+      <Button color="light" light onClick={toggleModal}>Skills</Button>
+      <Modal isOpen={modal} toggle={toggleModal} className=''>
+        <ModalHeader toggle={toggleModal}>Skills</ModalHeader>
+        <ModalBody>
+          <div>
+            <Nav tabs>
+              <NavItem>
+                <NavLink
+                  className={classnames({ active: activeTab === '1' })}
+                  onClick={() => { toggle('1'); }}
+                >
+                  Perfered-laungages
           </NavLink>
-        </NavItem>
+              </NavItem>
 
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '3' })}
-            onClick={() => { toggle('3'); }}
-          >
-            Environment
+              <NavItem>
+                <NavLink
+                  className={classnames({ active: activeTab === '3' })}
+                  onClick={() => { toggle('3'); }}
+                >
+                  Environment
           </NavLink>
-        </NavItem>
+              </NavItem>
 
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '4' })}
-            onClick={() => { toggle('4'); }}
-          >
-            Front-end
+              <NavItem>
+                <NavLink
+                  className={classnames({ active: activeTab === '4' })}
+                  onClick={() => { toggle('4'); }}
+                >
+                  Front-end
           </NavLink>
-        </NavItem>
+              </NavItem>
 
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '5' })}
-            onClick={() => { toggle('5'); }}
-          >
-            Server-side
+              <NavItem>
+                <NavLink
+                  className={classnames({ active: activeTab === '5' })}
+                  onClick={() => { toggle('5'); }}
+                >
+                  Server-side
           </NavLink>
-        </NavItem>
+              </NavItem>
 
-      </Nav>
-      <TabContent activeTab={activeTab}>
-        <TabPane tabId="1">
-          <Row>
-            <Col>
-              <h4>Perfered-laungages:</h4>
-                <ul className="list-unstyled">
-                    <li>
+            </Nav>
+            <TabContent activeTab={activeTab}>
+              <TabPane tabId="1">
+                <Row>
+                  <Col>
+                    <h4>Perfered-laungages:</h4>
+                    <ul className="list-unstyled">
+                      <li>
                         HTML
                     </li>
-                    <li>
+                      <li>
                         CSS
                     </li>
-                    <li>
+                      <li>
                         JavaScript
                     </li>
-                    <li>
+                      <li>
                         Node
                     </li>
-                </ul>
-            </Col>
-            <Col>
-                <h4>Other-laungages</h4>
-                <ul className="list-unstyled">
-                    <li>
+                    </ul>
+                  </Col>
+                  <Col>
+                    <h4>Other-laungages</h4>
+                    <ul className="list-unstyled">
+                      <li>
                         Python
                     </li>
-                    <li>
+                      <li>
                         C/C++
                     </li>
-                    <li>
+                      <li>
                         Java
                     </li>
-                </ul>
-            </Col>
-          </Row>
-        </TabPane>
+                    </ul>
+                  </Col>
+                </Row>
+              </TabPane>
 
-        <TabPane tabId="3">
-          <Row>
-            <Col>
-                <h4>Environment</h4>
-                <ul class="list-unstyled">
-                    <li>
+              <TabPane tabId="3">
+                <Row>
+                  <Col>
+                    <h4>Environment</h4>
+                    <ul class="list-unstyled">
+                      <li>
                         Postman
                     </li>
-                    <li>
+                      <li>
                         GitHub
                     </li>
-                    <li>
+                      <li>
                         Heroku
                     </li>
-                    <li>
+                      <li>
                         Windows
                     </li>
-                    <li>
+                      <li>
                         Mac
                     </li>
-                </ul>
-            </Col>
-          </Row>
-        </TabPane>
+                    </ul>
+                  </Col>
+                </Row>
+              </TabPane>
 
-        <TabPane tabId="4">
-          <Row>
-            <Col>
-                <h4>Front-end</h4>
-                <ul class="list-unstyled">
-                    <li>
+              <TabPane tabId="4">
+                <Row>
+                  <Col>
+                    <h4>Front-end</h4>
+                    <ul class="list-unstyled">
+                      <li>
                         Bootstrap
                     </li>
-                    <li>
+                      <li>
                         React
                     </li>
-                    <li>
+                      <li>
                         Reactstrap
                     </li>
-                    <li>
+                      <li>
                         Redux/Sagas
                     </li>
-                </ul>
-            </Col>
-          </Row>
-        </TabPane>
+                    </ul>
+                  </Col>
+                </Row>
+              </TabPane>
 
-        <TabPane tabId="5">
-          <Row>
-            <Col>
-                <h4>Back-end</h4>
-                <ul class="list-unstyled">
-                    <li>
+              <TabPane tabId="5">
+                <Row>
+                  <Col>
+                    <h4>Back-end</h4>
+                    <ul class="list-unstyled">
+                      <li>
                         Express
                     </li>
-                    <li>
+                      <li>
                         Axios
                     </li>
-                    <li>
+                      <li>
                         AJAX
                     </li>
-                    <li>
+                      <li>
                         Jquery
                     </li>
-                    <li>
+                      <li>
                         REST API’s
                     </li>
-                    <li>
+                      <li>
                         Postico
                     </li>
-                    <li>
+                      <li>
                         PostgreSQL
                     </li>
-                </ul>
-            </Col>
-          </Row>
-        </TabPane>
+                    </ul>
+                  </Col>
+                </Row>
+              </TabPane>
 
-      </TabContent>
-    </div>
+            </TabContent>
+          </div>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="secondary" onClick={toggleModal}>Close</Button>
+        </ModalFooter>
+      </Modal>
+    </>
   );
 }
 
-export default Example;
+export default Skills;

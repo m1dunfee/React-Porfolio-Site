@@ -14,3 +14,56 @@
 .list-unstyled{
   list-style: none;
 }
+
+.main{
+ text-align: center;
+}
+
+ html{
+  background: url(./shared/imgs/backgroundArt.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+ /* --------------------------------- positioning ---------------------------------- */
+  /* Centered text */
+  .centered-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  .positionA{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+
+  }
+  .positionB{
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    
+  }
+  .positionC{
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    
+  }
+  .positionD{
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    
+  }
+  .positionE{
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    
+  }

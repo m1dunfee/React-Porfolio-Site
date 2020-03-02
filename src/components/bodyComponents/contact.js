@@ -1,10 +1,10 @@
 import React, {Component, useState} from "react";
-import {Row, Col, Card, CardHeader, CardBody, Button, Modal, ModalHeader, ModalBody, ModalFooter,
-        Form, FormGroup, Label, Input, FormText } from 'reactstrap'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter,
+        Form, FormGroup, Label, Input, } from 'reactstrap'
 import axios from 'axios'
-import '../App.css'
+import '../../App.css'
 
-const ContactModal = (props) => {
+function Contact(){
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
@@ -28,10 +28,10 @@ const ContactModal = (props) => {
     }
 
   return (
-    <div>
-      <Button color="secondary" block onClick={toggle}>Email me!</Button>
+    <>
+      <Button color="light" light onClick={toggle}>Contact</Button>
       <Modal isOpen={modal} toggle={toggle} className="">
-        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+        <ModalHeader toggle={toggle}>Contact</ModalHeader>
         <ModalBody>
             <Form onSubmit={handleSubmition}>
             <FormGroup>
@@ -57,42 +57,8 @@ const ContactModal = (props) => {
             </Form>
         </ModalBody>
       </Modal>
-    </div>
+    </>
   );
 }
 
-class Contact extends Component{
-    render(){
-        return(
-            <div>
-                <Row id="contact">
-                    <Col>
-                        <h2 class="text-center">
-                            <hr/>
-                            Contact
-                            <hr/>
-                        </h2>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Card>
-                            <CardHeader>
-                                Get in touch
-                            </CardHeader>
-                            <CardBody>
-                                <p>
-                                    Please email me with any questions or call me at<a className="btn btn-link" role="button" href="tel:(612)-323-4496">(612)-323-4496.</a>
-                                    be sure to inclued your name, contact info, company, and reason for calling.
-                                </p>
-                            </CardBody>
-                            <ContactModal/>
-                        </Card>
-                    </Col>
-                </Row>
-            </div>
-        )
-    }
-}
-
-export default Contact;
+export default Contact
