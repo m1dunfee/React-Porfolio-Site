@@ -21,6 +21,7 @@
 
  html{
   background: url(./shared/imgs/backgroundArt.jpg) no-repeat center center fixed; 
+  min-height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
